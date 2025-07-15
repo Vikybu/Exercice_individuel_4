@@ -1,0 +1,9 @@
+h1 {
+    font-family: "Geo", sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+label, h2, p, button {
+    font-family: "Roboto Flex", sans-serif;
+}

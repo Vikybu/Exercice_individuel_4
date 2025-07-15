@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer type="module"></script>
+    <script src="latinToMorse.js" defer type="module"></script>
     <script src="dicoMorse.js" defer type="module"></script>
-    <title>Document</title>
+    <script src="morseToLatin.js" defer type="module"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Borel&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Geo:ital@0;1&family=Lavishly+Yours&family=Meow+Script&family=Nova+Square&family=Oswald:wght@200..700&family=Quintessential&family=Rationale&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Borel&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Geo:ital@0;1&family=Lavishly+Yours&family=Meow+Script&family=Nova+Square&family=Oswald:wght@200..700&family=Quintessential&family=Rationale&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-</body>
+    <h1>ENCODEUR - DECODEUR de MORSE</h1>
+<hr>
+    <h2>Encodeur Français => Morse</h2>
+        <label for="encodeur">Rentrer ici le mot ou la phrase à encoder en morse
+        <input id="encodeur" name="encodeur">
+        </label>
+        <button type="button" id="btn_encodeur">ENCODER</button>
+        <p>Résultat :</p>
+
+    <h2>Décodeur Morse => Français</h2>
+        <label for="decodeur">Rentrer ici le mot ou la phrase à decoder en français
+        <input id="decodeur" name="decodeur">
+        </label>
+        <button type="button" id="btn_decodeur">DECODER</button>
+        <p>Résultat :</p>
+
 </html>
