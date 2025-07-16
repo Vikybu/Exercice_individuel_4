@@ -2,8 +2,7 @@ import { latinToMorse} from "./dicoMorse.js"
 
 const btn_encodeur = document.getElementById('btn_encodeur')
 const encodeur = document.getElementById('encodeur')
-
-let text = 'Bonjour je suis Victoria'
+const resultatP = document.getElementById('resultat_p')
 
 function getLatinCharacterList(text){
     let tab = text.split("")
@@ -35,12 +34,15 @@ function encode(text){
     for (let i = 0; i < tab.length; i++){
         letterInMorse = translateLatinCharacter(tab[i])
         tabMorse.push(letterInMorse)
-        
     }
-    console.log(tabMorse.join("")) 
+    return (tabMorse.join("")) 
 }
 
-btn_encodeur.addEventListener('click', encode(encodeur.value))
+function displayEncode(valeur){
+    resultatP.innerText = `Résultat : ${valeur}`
+}
 
-
-encode(text)
+btn_encodeur.addEventListener('click', () => {
+    let morseValue = encode(encodeur.value)
+    displayEncode(morseValue)
+    })

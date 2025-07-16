@@ -1,6 +1,8 @@
 import { morseToLatin } from "./dicoMorse.js"
 
-let sentence = "-... --- -. .--- --- ..- .-./.--- ./... ..- .. .../...- .. -.-. - --- .-. .. .-"
+const btn_decodeur = document.getElementById('btn_decodeur')
+const decodeur = document.getElementById('decodeur')
+const resultatPM = document.getElementById('resultat_p_m')
 
 function getMorseCharacterList(sentence){
     let tab = sentence.split("/")
@@ -31,7 +33,7 @@ translateMorseCharacter
 
 function decode(sentence){
     let tab = getMorseCharacterList(sentence)
-    console.log(tab)
+
     let tabLatin = []
     let morseInLetter = ""
     for (let i = 0; i < tab.length; i++){
@@ -39,8 +41,15 @@ function decode(sentence){
         tabLatin.push(morseInLetter)
         
     }
-    console.log(tabLatin.join("")) 
+    return (tabLatin.join("")) 
+}
+
+function displayDecode(valeur){
+    resultatPM.innerText = `Résultat : ${valeur}`
 }
 
 
-decode(sentence)
+btn_decodeur.addEventListener('click', () => {
+    let latinValue = decode(decodeur.value)
+    displayDecode(latinValue)
+    })
