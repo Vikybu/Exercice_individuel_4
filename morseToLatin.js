@@ -38,8 +38,7 @@ function decode(sentence){
     let morseInLetter = ""
     for (let i = 0; i < tab.length; i++){
         morseInLetter = translateMorseCharacter(tab[i])
-        tabLatin.push(morseInLetter)
-        
+        tabLatin.push(morseInLetter) 
     }
     return (tabLatin.join("")) 
 }

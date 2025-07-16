@@ -34,6 +34,7 @@ function encode(text){
     for (let i = 0; i < tab.length; i++){
         letterInMorse = translateLatinCharacter(tab[i])
         tabMorse.push(letterInMorse)
+        tabMorse.push('\\')
     }
     return (tabMorse.join("")) 
 }
