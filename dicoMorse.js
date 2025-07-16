@@ -1,5 +1,5 @@
 export const latinToMorse = {
-	' ':' ',
+	' ':'/',
 	'A':'.-',
 	'B':'-...',
 	'C':'-.-.',
